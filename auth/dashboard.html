@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        nav {
+            background-color: aquamarine;
+        }
+        nav, ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul {
+            list-style: none;
+        }
+        nav a {
+            display: inline-block;
+            padding: 12px 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav>
+            <a href="#"><img src="" alt="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Session</a></li>
+                <li><a href="#">Admin</a></li>
+                <li><a href="#">FAQ</a></li>
+                <!-- <li id="user"><a href="#">Welcome </a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1 id="username">Welcome </h1>
+    </section>
+  </body>
+</html>
+<script>
+  let users = sessionStorage.getItem('user');
+  username.innerHTML += users
+</script>
