@@ -84,7 +84,7 @@ v
 
 </html>
 <script>
-    let index = 0
+
     let arr = JSON.parse(localStorage.getItem('account'))
     function login() {
         button.innerHTML = 'loading...'
@@ -102,6 +102,7 @@ v
                 let value = loginAttempt++
 
                 window.location.href = 'signup.html'
+<<<<<<< HEAD
             }else if(loginAttempt >= 3){
                 alert('Your accounts has been barred, Contact support for Assistant')
             }else if (user.password !== password.value){
@@ -109,6 +110,21 @@ v
             }else{
                 alert('Login successful')
                 sessionStorage.setItem('user', user.username)
+=======
+            } else if (user.loginAttempts >= 3) {
+                alert('your account is barred , contact support')
+            } else if (user.password !== password.value) {
+                let value = user.loginAttempts
+                value++
+                user.loginAttempts = value
+                localStorage.setItem('account', JSON.stringify(arr))
+                alert('invalid password')
+            } else {
+                user.loginAttempts = 0
+                localStorage.setItem('account', JSON.stringify(arr))
+                localStorage.setItem('loggedInUser', JSON.stringify(user))
+                alert('login successful')
+>>>>>>> c9a0c4d67ac7b5fefe1b735f1c055bafd48305d3
                 window.location.href = 'dashboard.html'
             }
 
