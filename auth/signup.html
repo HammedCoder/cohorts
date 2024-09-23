@@ -121,37 +121,6 @@
   let email = document.getElementById("email");
   let arr = JSON.parse(localStorage.getItem("account")) || [];
 
-<<<<<<< HEAD
-  function signUp() {
-    if (!emailRegex.test(email.value)) {
-      alert("Invalid email");
-    } else if (!passwordRegex.test(password.value)) {
-      alert(
-        "Invalid password. Password must be at least 8 characters long comprises of block and lower case include an underscore"
-      );
-    } else if (!url.value.match(urlRegex)) {
-      alert("url not secure !!!!");
-    } else if (confirmpassword.value !== password.value) {
-      alert(`password mismatch`);
-    } else if (
-      arr.find((userObject) => {
-        return userObject.email === email.value;
-      })
-    ) {
-      alert("Email already in used, use another email");
-    } else {
-      let userObject = {
-        username: username.value,
-        email: email.value,
-        password: password.value,
-        URL: url.value,
-        loginAttempt: 0,
-      };
-      arr.push(userObject);
-      localStorage.setItem("account", JSON.stringify(arr));
-      alert("sign up success");
-      window.location.href = "Login.html";
-=======
     function signUp() {
         if (!emailRegex.test(email.value)) {
             alert("Invalid email")
@@ -183,9 +152,8 @@
             alert('sign up success')
 
         }
->>>>>>> c9a0c4d67ac7b5fefe1b735f1c055bafd48305d3
     }
-  }
+  
 
   let show = document.getElementById("pp");
   show.style.display = "none";

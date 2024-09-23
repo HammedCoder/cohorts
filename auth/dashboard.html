@@ -1,56 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        nav {
-            background-color: aquamarine;
-        }
-        nav, ul {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        ul {
-            list-style: none;
-        }
-        nav a {
-            display: inline-block;
-            padding: 12px 10px;
-        }
-    </style>
-  </head>
-  <body>
-    <header>
-        <nav>
-            <a href="#"><img src="" alt="logo"></a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Session</a></li>
-                <li><a href="#">Admin</a></li>
-                <li><a href="#">FAQ</a></li>
-                <!-- <li id="user"><a href="#">Welcome </a></li> -->
-            </ul>
-        </nav>
-    </header>
-    <section>
-        <h1 id="username">Welcome </h1>
-    </section>
-  </body>
-</html>
-<script>
-  let users = sessionStorage.getItem('user');
-  username.innerHTML += users
-</script>
-=======
 
 <head>
     <meta charset="UTF-8">
@@ -120,6 +69,8 @@
     // let input = document.getElementById('input')
     function pickFile(e) {
         let file = e.target.files[0]
+        console.log(file);
+        
         let reader = new FileReader()
 
         if (file) {
@@ -246,4 +197,3 @@
     }
 
 </script>
->>>>>>> c9a0c4d67ac7b5fefe1b735f1c055bafd48305d3
